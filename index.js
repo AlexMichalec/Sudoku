@@ -266,7 +266,6 @@ function hint() {
       for (let j = 0; j < 9; ++j)
         if (document.getElementById("" + i + j).value == "")
           czyZapelnione = false;
-    console.log(czyZapelnione);
     if (czyZapelnione) return;
 
     czycsKolory();
@@ -295,7 +294,6 @@ function czycsKolory() {
 }
 
 function kolorujWiersze(i, j) {
-  console.log("" + i + j);
   let el = document.getElementById("" + i + j);
   let war = el.value;
   let res;
@@ -318,7 +316,6 @@ function kolorujWiersze(i, j) {
 }
 
 function kolorujKolumny(i, j) {
-  console.log("k" + "" + i + j);
   let el = document.getElementById("" + i + j);
   let war = el.value;
   let res;
@@ -366,7 +363,6 @@ function win() {
     "rgb(" + nwyb + "," + wyb + "," + nwyb + ")";
   document.getElementById("butHin").style.backgroundColor =
     "rgb(" + nwyb + "," + nwyb + "," + wyb + ")";
-  console.log(wynik);
   if (wynik != 405) return false;
   document.getElementById("title").innerText = "Gratulacje! :D";
   document.getElementById("title").style.color = "gold";
