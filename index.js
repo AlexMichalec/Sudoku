@@ -203,6 +203,7 @@ function klik(i, j) {
 
 function losuj() {
   document.getElementById("title").innerText = "SUDOKU";
+  document.getElementById("title").style.color = "white";
   board = ustawWszystkie();
   while (!czyPoprawne(board)) board = ustawWszystkie();
   let temp = "";
@@ -368,6 +369,7 @@ function win() {
   console.log(wynik);
   if (wynik != 405) return false;
   document.getElementById("title").innerText = "Gratulacje! :D";
+  document.getElementById("title").style.color = "gold";
   czyRozwiazane = true;
   return true;
 }
